@@ -9,15 +9,18 @@ function setup() {
   new Canvas();
   //world.gravity.y = 10;
   monster = new Sprite();
-	monster.img = 'monster.png';
-	monster.diameter = 32;
+  monster.img = 'monster.png';
+  monster.diameter = 32;
   msgbox = new Sprite(300,100,500,50,"static");
   msgbox.color = "magenta";
   msgbox.textSize = 14;
+  
 }//end setup function
 
 function draw() {
   background(0);
+
+
 
   secs = Math.floor(millis()/1000)
   msgbox.text = secs;
@@ -43,7 +46,11 @@ function draw() {
 	  monster.speed = 0;
 	}
 	
-	
+      fill(255);
+      noStroke();
+      textAlign(CENTER, CENTER);
+      text("use arrow keys, or SPACE to stop",
+        width/2, height*0.67);
 
 }//end draw function
 
